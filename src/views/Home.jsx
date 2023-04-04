@@ -13,10 +13,12 @@ export default function Home() {
     
     const response = await axios.get(
       `http://localhost:5000/cart/increase/${id}/${user.id}`
+      // `https://ecommercewinebackend-production.up.railway.app/cart/increase/${id}/${user.id}`
     );
     
     if (response.status === 200) {
       const cantCart = await axios.get(`http://localhost:5000/cart/quantity/${user.id}`);
+      // const cantCart = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/quantity/${user.id}`);
       setCartProduct(cantCart.data[0].cantidad);
     }
   };

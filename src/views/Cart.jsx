@@ -21,17 +21,20 @@ export default function Cart() {
 
   const getCartproducts = async () => {
     const response = await axios.get(`http://localhost:5000/cart/${user.id}`);
+    // const response = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/${user.id}`);
     setCarrito(response.data);
     getTotCart(user.id);
   };
 
   const getTotCart = async () => {
     const response = await axios.get(`http://localhost:5000/cart/total/${user.id}`);
+    // const response = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/total/${user.id}`);
     setTotal(response.data);
   };
 
   const getProduct = async (id) => {
     const response = await axios.get(`http://localhost:5000/cart/product/${id}`);
+    // const response = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/product/${id}`);
     setProd(response.data);
   };
   const tooglefalse = () => {
@@ -42,11 +45,13 @@ export default function Cart() {
     
     const response = await axios.get(
       `http://localhost:5000/cart/increaseCart/${id}/${user.id}`
+      // `https://ecommercewinebackend-production.up.railway.app/cart/increaseCart/${id}/${user.id}`
     );
    
     if (response.status === 200) {
       getCartproducts();
       const cantCart = await axios.get(`http://localhost:5000/cart/quantity/${user.id}`);
+      // const cantCart = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/quantity/${user.id}`);
       setCartProduct(cantCart.data[0].cantidad);
     }
   };
@@ -57,9 +62,11 @@ export default function Cart() {
     if (prod && prod[0] && prod[0].amount_cart > 0) {
       const response = await axios.get(
         `http://localhost:5000/cart/reduce/${id}/${user.id}`
+        // `https://ecommercewinebackend-production.up.railway.app/cart/reduce/${id}/${user.id}`
       );
       if (response.status === 200) {
         const cantCart = await axios.get(`http://localhost:5000/cart/quantity/${user.id}`);
+        // const cantCart = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/quantity/${user.id}`);
         setCartProduct(cantCart.data[0].cantidad);
         getCartproducts();
       }
@@ -69,6 +76,7 @@ export default function Cart() {
   const removeProduct = async (id) => {
     const response = await axios.delete(
       `http://localhost:5000/cart/remove/${id}`
+      // `https://ecommercewinebackend-production.up.railway.app/cart/remove/${id}`
     );
     if (response.status === 200) {
       getCartproducts();

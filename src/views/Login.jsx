@@ -11,9 +11,9 @@ const RegistroForm = () => {
 
   const { setCustomer } = useContext(DataContext);
   const navigate = useNavigate();
-  // const [customer, setCustomerLocal] = useState({});
 
-const [customer, setCustomerLocal] = useState({ email: '', password: '' });
+
+const [customer, setCustomerLocal] = useState({ email: '', password: ''});
 
   const handleSetCustomer = ({ target: { value, name } }) => {
     const field = {};
@@ -25,6 +25,7 @@ const [customer, setCustomerLocal] = useState({ email: '', password: '' });
 //  -------------------------------------------------------------- 
   const iniciarSesion = async () => {
     const urlServer = "http://localhost:5000";
+    // const urlServer = "https://ecommercewinebackend-production.up.railway.app";
     const endpoint = "/";
     const { email, password } = customer;
     
