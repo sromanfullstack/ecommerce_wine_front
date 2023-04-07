@@ -16,8 +16,8 @@ const DataProvider = ({children}) => {
 	const user = JSON.parse(localStorage.getItem("user")); //trae id de usuario logueado
 
 	const getCantProducts = async () => {
-		const cantCart = await axios.get(`http://localhost:5000/cart/quantity/${user.id}`);
-		// const cantCart = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/quantity/${user.id}`);
+		// const cantCart = await axios.get(`http://localhost:5000/cart/quantity/${user.id}`);
+		const cantCart = await axios.get(`https://ecommercewinebackend-production.up.railway.app/cart/quantity/${user.id}`);
 		setCartProduct(cantCart.data[0].cantidad);
 	};
 
@@ -27,8 +27,8 @@ const DataProvider = ({children}) => {
 
 	
 	const getProducts = async () => {
-		// const producto = await fetch("https://ecommercewinebackend-production.up.railway.app/products");
-		const producto = await fetch("http://localhost:5000/products");
+		const producto = await fetch("https://ecommercewinebackend-production.up.railway.app/products");
+		// const producto = await fetch("http://localhost:5000/products");
 		
 		const data = await producto.json()
 			setProductos(data)

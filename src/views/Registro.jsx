@@ -119,8 +119,8 @@ export default function RegistroForm() {
   };
 
   const registrarCustomer = async () => {
-    const urlServer = "http://localhost:5000";
-    // const urlServer = "https://ecommercewinebackend-production.up.railway.app";
+    // const urlServer = "http://localhost:5000";
+    const urlServer = "https://ecommercewinebackend-production.up.railway.app";
     const endpoint = "/customers";
     try {
       await axios.post(urlServer + endpoint, customer);

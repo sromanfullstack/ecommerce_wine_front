@@ -31,7 +31,7 @@ const Navbar = () => {
             </div>
             <span className="me-3">
               <Link to="/home">
-                Vinos
+                Minimarket "A la vuelta estan tus Vinos"
                 <i disabled={true} className="fa-solid fa-house ms-2"></i>
               </Link>
             </span>

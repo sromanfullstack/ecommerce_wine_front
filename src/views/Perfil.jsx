@@ -5,8 +5,8 @@ export default function Perfil() {
 
   const [customerLocal, setCustomerLocal] = useState({});
   const getCustomerData = async () => {
-    const urlServer = "http://localhost:5000";
-    // const urlServer = "https://ecommercewinebackend-production.up.railway.app";
+    // const urlServer = "http://localhost:5000";
+    const urlServer = "https://ecommercewinebackend-production.up.railway.app";
     const endpoint = "/customers";
     const token = localStorage.getItem("token");
 

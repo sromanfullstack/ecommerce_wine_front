@@ -24,8 +24,8 @@ const [customer, setCustomerLocal] = useState({ email: '', password: ''});
 
 //  -------------------------------------------------------------- 
   const iniciarSesion = async () => {
-    const urlServer = "http://localhost:5000";
-    // const urlServer = "https://ecommercewinebackend-production.up.railway.app";
+    // const urlServer = "http://localhost:5000";
+    const urlServer = "https://ecommercewinebackend-production.up.railway.app";
     const endpoint = "/";
     const { email, password } = customer;
     

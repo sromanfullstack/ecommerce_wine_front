@@ -29,7 +29,7 @@ body {
  
   font-family:'Arima', cursive;
   text-align: center;
-  background: url('https://s1.1zoom.me/big0/593/Holidays_Wine_Roses_Black_background_Bottle_540218_1280x853.jpg') no-repeat center center fixed; 
+  background: url('https://www.laguiadelvaron.com/wp-content/uploads/2019/10/vino.gif') no-repeat center center fixed; 
   background-color: brown;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -53,8 +53,8 @@ a:hover {
 }
 
 #register-button, #login-button{
-  background-color:white;
-  color:black;
+  background-color:rgb(240, 116, 116);
+  color:rgb(10, 10, 10);
   font-weight: bold;
   border: 1px solid;
   /* margin-right: 20rem; */
@@ -310,18 +310,18 @@ footer img {
 
 /* Estilos para el botón de iniciar sesión */
 #btn {
-  background-color: #007bff;
+  /* background-color: #007bff; */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  color: #fff;
+  color: #1f1d1d;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 #btn:hover {
-  background-color: #0069d9;
+  background-color: #802205;
 }
 
 /* Estilos para las columnas */
